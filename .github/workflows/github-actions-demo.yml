@@ -59,8 +59,7 @@ jobs:
             COMMIT_SHA=${{ steps.get_sha.outputs.short_sha }}
         env:
           DOCKER_BUILDKIT: 1
-
- deploy:
+  deploy:
     runs-on: ubuntu-latest
     needs: build-and-push
     environment: staging
